@@ -19,7 +19,7 @@
 
   <body>
 
-<header class="site-header">
+    <header class="site-header">
 
 	<div class="wrapper">
 
@@ -86,19 +86,57 @@
   <article class="post-content Publications clearfix">
     
 <h3 class="year">2019</h3>
-<ol class="bibliography">
+<ol class="bibliography"><li>
 
-<li>
-
-<div id="phd_thesis">
+<div id="lovasz">
   
-    <span class="title"> <b>PhD Thesis: Neural Graph Embedding methods for Natural Language Processing </b></span>
+    <span class="title"> <b>Lovasz Convolutional Networks </b></span>
     <span class="author">
+      
+        
+          
+            
+              <a href="https://in.linkedin.com/in/prateek-yadav-40bb34a8" target="_blank">Yadav, Prateek</a>,
+            
+          
+        
+      
+        
+          
+            
+              <a href="https://madhavcsa.github.io/" target="_blank">Nimishakavi, Madhav</a>,
+            
+          
+        
+      
+        
+          
+            
+              <a href="https://in.linkedin.com/in/naganand-yadati-0665299b" target="_blank">Yadati, Naganand</a>,
+            
+          
+        
+      
+        
+          
+            <em>Vashishth, Shikhar</em>,
+          
+        
+      
+        
+          
+            
+              <a href="https://scholar.google.com/citations?user=gytfaaoAAAAJ&amp;hl=en" target="_blank">Rajkumar, Arun</a>,
+            
+          
+        
       
         
           and
           
-            <em>Vashishth, Shikhar</em>
+            
+              <a href="http://talukdar.net/" target="_blank">Talukdar, Partha</a>
+            
           
         
       
@@ -106,7 +144,7 @@
 
     <span class="periodical">
     
-      <em>In IISc PhD Thesis</em>
+      <em>In Proceedings of the International Conference on  Artificial Intelligence and Statistics (AISTATS)</em>
     
     
       2019
@@ -121,13 +159,13 @@
   
   
   
-    <a href="https://arxiv.org/abs/1911.03042" target="_blank" class="shikhar-rounded-corners">PDF</a>
+    <a href="https://arxiv.org/pdf/1805.11365.pdf" target="_blank" class="shikhar-rounded-corners">PDF</a>
   
   
   
   
-    <a href="https://shikhar-vashishth.github.io/assets/pdf/phd_slides.pdf" target="_blank" class="shikhar-rounded-corners">Slides</a>
   
+    <a href="https://github.com/malllabiisc/lcn" target="_blank" class="shikhar-rounded-corners">Code</a>
   
   
   
@@ -136,17 +174,11 @@
   <!-- Hidden abstract block -->
   
   <span class="abstract hidden">
-    <p>Graphs are all around us, ranging from citation and social networks to Knowledge Graphs (KGs). They are one of the most expressive data structures which have been used to model a variety of problems. Knowledge graphs are structured representations of facts in a graph, where nodes represent entities and edges represent relationships between them. Recent research has resulted in the development of several large KGs; examples include DBpedia, YAGO, NELL, and Freebase. However, all of them tend to be sparse with very few facts per entity. For instance, NELL KG consists of only 1.34 facts per entity. In the first part of the thesis, we propose three solutions to alleviate this problem: (1) KG Canonicalization, i.e., identifying and merging duplicate entities in a KG, (2) Relation Extraction which involves automating the process of extracting semantic relationships between entities from unstructured text, and (3) Link prediction which includes inferring missing facts based on the known facts in a KG. For KG Canonicalization, we propose CESI (Canonicalization using Embeddings and Side Information), a novel approach that performs canonicalization over learned embeddings of Open KGs. The method extends recent advances in KG embedding by incorporating relevant NP and relation phrase side information in a principled manner. For relation extraction, we propose RESIDE, a distantly-supervised neural relation extraction method which utilizes additional side information from KGs for improved relation extraction. Finally, for link prediction, we propose InteractE which extends ConvE, a convolutional neural network-based link prediction method, by increasing the number of feature interaction through three key ideas â€“ feature permutation, a novel feature reshaping, and circular convolution. Through extensive experiments on multiple datasets, we demonstrate the effectiveness of our proposed methods. 
-
-  Traditional Neural Networks like Convolutional Networks and Recurrent Neural Networks are constrained to handle Euclidean data. However, graphs in Natural Language Processing (NLP) are prominent. Recently, Graph Convolutional Networks (GCNs) have been proposed to address this shortcoming and have been successfully applied for several problems. In the second part of the thesis, we utilize GCNs for Document Timestamping problem, which forms an essential component of tasks like document retrieval, and summarization.  For this, we propose NeuralDater which leverages GCNs for jointly exploiting syntactic and temporal graph structures of document for obtaining state-of-the-art performance on the problem. We also propose SynGCN, a flexible Graph Convolution based method for learning word embeddings which utilize the dependency context of a word instead of linear context for learning more meaningful word embeddings. 
-
-  In this third part of the thesis, we address two limitations of existing GCN models, i.e., (1) The standard neighborhood aggregation scheme puts no constraints on the number of nodes that can influence the representation of a target node. This leads to a noisy representation of hub-nodes which coves almost the entire graph in a few hops. To address this shortcoming, we propose ConfGCN (Confidence-based GCN) which estimates confidences to determine the importance of a node on another during aggregation, thus restricting its influence neighborhood. (2) Most of the existing GCN models are limited to handle undirected graphs. However, a more general and pervasive class of graphs are relational graphs where each edge has a label and direction associated with it. Existing approaches to handle such graphs suffer from over-parameterization and are restricted to learning representation of nodes only. We propose CompGCN, a novel Graph Convolutional framework which jointly embeds entity and relations in a relational graph. CompGCN is parameter efficient and scales with the number of relations. It leverages a variety of entity-relation composition operations from KG Embedding techniques and achieves demonstrably superior results on node classification, link prediction, and graph classification tasks.
-  </p>
+    <p>Semi-supervised learning on graph structured data has received significant attention with the recent introduction of Graph Convolution Networks (GCN). While traditional methods have focused on optimizing a loss augmented with Laplacian regularization framework, GCNs perform an implicit Laplacian type regularization to capture local graph structure. In this work, we propose Lovasz Convolutional Network (LCNs) which are capable of incorporating global graph properties. LCNs achieve this by utilizing Lovasz’s orthonormal embeddings of the nodes. We analyse local and global properties of graphs and demonstrate settings where LCNs tend to work better than GCNs. We validate the proposed method on standard random graph models such as stochastic block models (SBM) and certain community structure based graphs where LCNs outperform GCNs and learn more intuitive embeddings. We also perform extensive binary and multi-class classification experiments on real world datasets to demonstrate LCN’s effectiveness. In addition to simple graphs, we also demonstrate the use of LCNs on hyper-graphs by identifying settings where they are expected to work better than GCNs.</p>
   </span>
   
 </div>
 </li>
-
 <li>
 
 <div id="tutorial">
@@ -376,89 +408,6 @@
 </li>
 <li>
 
-<div id="interacte">
-  
-    <span class="title"> <b>InteractE: Improving Convolution-based Knowledge Graph Embeddings by Increasing Feature Interactions </b></span>
-    <span class="author">
-      
-        
-          
-            <em>Vashishth, Shikhar</em>,
-          
-        
-      
-        
-          
-            
-              <a href="https://www.linkedin.com/in/soumyasanyal" target="_blank">Sanyal, Soumya</a>,
-            
-          
-        
-      
-        
-          
-            
-              <a href="https://in.linkedin.com/in/vikram-nitin-a63037124" target="_blank">Nitin, Vikram</a>,
-            
-          
-        
-      
-        
-          
-            
-              Agrawal, Nilesh,
-            
-          
-        
-      
-        
-          and
-          
-            
-              <a href="http://talukdar.net/" target="_blank">Talukdar, Partha</a>
-            
-          
-        
-      
-    </span>
-
-    <span class="periodical">
-    
-      <em>In Proceedings of the Conference on Artificial Intelligence (AAAI)</em>
-    
-    
-      2020
-    
-    </span>
-  
-
-  <span class="links">
-  
-    <a class="abstract shikhar-rounded-corners">Abstract</a>
-  
-  
-  
-  
-    <a href="https://arxiv.org/abs/1911.00219" target="_blank" class="shikhar-rounded-corners">PDF</a>
-  
-  
-  
-  
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>Most existing knowledge graphs suffer from incompleteness, which can be alleviated by inferring missing links based on known facts. One popular way to accomplish this is to generate low-dimensional embeddings of entities and relations, and use these to make inferences. ConvE, a recently proposed approach, applies convolutional filters on 2D reshapings of entity and relation embeddings in order to capture rich interactions between their components. However, the number of interactions that ConvE can capture is limited. In this paper, we analyze how increasing the number of these interactions affects link prediction performance, and utilize our observations to propose InteractE. InteractE is based on three key ideas – feature permutation, a novel feature reshaping, and circular convolution. Through extensive experiments, we find that InteractE outperforms state-of-the-art convolutional link prediction baselines on FB15k-237. Further, InteractE achieves an MRR score that is 9%, 7.5%, and 23% better than ConvE on the FB15k-237, WN18RR and YAGO3-10 datasets respectively. The results validate our central hypothesis – that increasing feature interaction is beneficial to link prediction performance. We make the source code of InteractE available to encourage reproducible research.</p>
-  </span>
-  
-</div>
-</li>
-<li>
-
 <div id="attention">
   
     <span class="title"> <b>Attention Interpretability Across NLP Tasks </b></span>
@@ -631,100 +580,6 @@
 </li>
 <li>
 
-<div id="lovasz">
-  
-    <span class="title"> <b>Lovasz Convolutional Networks </b></span>
-    <span class="author">
-      
-        
-          
-            
-              <a href="https://in.linkedin.com/in/prateek-yadav-40bb34a8" target="_blank">Yadav, Prateek</a>,
-            
-          
-        
-      
-        
-          
-            
-              <a href="https://madhavcsa.github.io/" target="_blank">Nimishakavi, Madhav</a>,
-            
-          
-        
-      
-        
-          
-            
-              <a href="https://in.linkedin.com/in/naganand-yadati-0665299b" target="_blank">Yadati, Naganand</a>,
-            
-          
-        
-      
-        
-          
-            <em>Vashishth, Shikhar</em>,
-          
-        
-      
-        
-          
-            
-              <a href="https://scholar.google.com/citations?user=gytfaaoAAAAJ&amp;hl=en" target="_blank">Rajkumar, Arun</a>,
-            
-          
-        
-      
-        
-          and
-          
-            
-              <a href="http://talukdar.net/" target="_blank">Talukdar, Partha</a>
-            
-          
-        
-      
-    </span>
-
-    <span class="periodical">
-    
-      <em>In Proceedings of the International Conference on  Artificial Intelligence and Statistics (AISTATS)</em>
-    
-    
-      2019
-    
-    </span>
-  
-
-  <span class="links">
-  
-    <a class="abstract shikhar-rounded-corners">Abstract</a>
-  
-  
-  
-  
-    <a href="https://arxiv.org/pdf/1805.11365.pdf" target="_blank" class="shikhar-rounded-corners">PDF</a>
-  
-  
-  
-  
-  
-    <a href="https://github.com/malllabiisc/lcn" target="_blank" class="shikhar-rounded-corners">Code</a>
-  
-  
-  
-  </span>
-
-  <!-- Hidden abstract block -->
-  
-  <span class="abstract hidden">
-    <p>Semi-supervised learning on graph structured data has received significant attention with the recent introduction of Graph Convolution Networks (GCN). While traditional methods have focused on optimizing a loss augmented with Laplacian regularization framework, GCNs perform an implicit Laplacian type regularization to capture local graph structure. In this work, we propose Lovasz Convolutional Network (LCNs) which are capable of incorporating global graph properties. LCNs achieve this by utilizing Lovasz’s orthonormal embeddings of the nodes. We analyse local and global properties of graphs and demonstrate settings where LCNs tend to work better than GCNs. We validate the proposed method on standard random graph models such as stochastic block models (SBM) and certain community structure based graphs where LCNs outperform GCNs and learn more intuitive embeddings. We also perform extensive binary and multi-class classification experiments on real world datasets to demonstrate LCN’s effectiveness. In addition to simple graphs, we also demonstrate the use of LCNs on hyper-graphs by identifying settings where they are expected to work better than GCNs.</p>
-  </span>
-  
-</div>
-</li>
-
-<li>
-
 <div id="confGCN">
   
     <span class="title"> <b>Confidence-based Graph Convolutional Networks for Semi-Supervised Learning </b></span>
@@ -800,7 +655,64 @@
   
 </div>
 </li>
-</ol>
+<li>
+
+<div id="phd_thesis">
+  
+    <span class="title"> <b>PhD Thesis: Neural Graph Embedding methods for Natural Language Processing </b></span>
+    <span class="author">
+      
+        
+          and
+          
+            <em>Vashishth, Shikhar</em>
+          
+        
+      
+    </span>
+
+    <span class="periodical">
+    
+      <em>In IISc PhD Thesis</em>
+    
+    
+      2019
+    
+    </span>
+  
+
+  <span class="links">
+  
+    <a class="abstract shikhar-rounded-corners">Abstract</a>
+  
+  
+  
+  
+    <a href="https://arxiv.org/abs/1911.03042" target="_blank" class="shikhar-rounded-corners">PDF</a>
+  
+  
+  
+  
+    <a href="https://shikhar-vashishth.github.io/assets/pdf/phd_slides.pdf" target="_blank" class="shikhar-rounded-corners">Slides</a>
+  
+  
+  
+  
+  </span>
+
+  <!-- Hidden abstract block -->
+  
+  <span class="abstract hidden">
+    <p>Graphs are all around us, ranging from citation and social networks to Knowledge Graphs (KGs). They are one of the most expressive data structures which have been used to model a variety of problems. Knowledge graphs are structured representations of facts in a graph, where nodes represent entities and edges represent relationships between them. Recent research has resulted in the development of several large KGs; examples include DBpedia, YAGO, NELL, and Freebase. However, all of them tend to be sparse with very few facts per entity. For instance, NELL KG consists of only 1.34 facts per entity. In the first part of the thesis, we propose three solutions to alleviate this problem: (1) KG Canonicalization, i.e., identifying and merging duplicate entities in a KG, (2) Relation Extraction which involves automating the process of extracting semantic relationships between entities from unstructured text, and (3) Link prediction which includes inferring missing facts based on the known facts in a KG. For KG Canonicalization, we propose CESI (Canonicalization using Embeddings and Side Information), a novel approach that performs canonicalization over learned embeddings of Open KGs. The method extends recent advances in KG embedding by incorporating relevant NP and relation phrase side information in a principled manner. For relation extraction, we propose RESIDE, a distantly-supervised neural relation extraction method which utilizes additional side information from KGs for improved relation extraction. Finally, for link prediction, we propose InteractE which extends ConvE, a convolutional neural network-based link prediction method, by increasing the number of feature interaction through three key ideas â€“ feature permutation, a novel feature reshaping, and circular convolution. Through extensive experiments on multiple datasets, we demonstrate the effectiveness of our proposed methods. 
+
+	Traditional Neural Networks like Convolutional Networks and Recurrent Neural Networks are constrained to handle Euclidean data. However, graphs in Natural Language Processing (NLP) are prominent. Recently, Graph Convolutional Networks (GCNs) have been proposed to address this shortcoming and have been successfully applied for several problems. In the second part of the thesis, we utilize GCNs for Document Timestamping problem, which forms an essential component of tasks like document retrieval, and summarization.	For this, we propose NeuralDater which leverages GCNs for jointly exploiting syntactic and temporal graph structures of document for obtaining state-of-the-art performance on the problem. We also propose SynGCN, a flexible Graph Convolution based method for learning word embeddings which utilize the dependency context of a word instead of linear context for learning more meaningful word embeddings. 
+
+	In this third part of the thesis, we address two limitations of existing GCN models, i.e., (1) The standard neighborhood aggregation scheme puts no constraints on the number of nodes that can influence the representation of a target node. This leads to a noisy representation of hub-nodes which coves almost the entire graph in a few hops. To address this shortcoming, we propose ConfGCN (Confidence-based GCN) which estimates confidences to determine the importance of a node on another during aggregation, thus restricting its influence neighborhood. (2) Most of the existing GCN models are limited to handle undirected graphs. However, a more general and pervasive class of graphs are relational graphs where each edge has a label and direction associated with it. Existing approaches to handle such graphs suffer from over-parameterization and are restricted to learning representation of nodes only. We propose CompGCN, a novel Graph Convolutional framework which jointly embeds entity and relations in a relational graph. CompGCN is parameter efficient and scales with the number of relations. It leverages a variety of entity-relation composition operations from KG Embedding techniques and achieves demonstrably superior results on node classification, link prediction, and graph classification tasks.
+	</p>
+  </span>
+  
+</div>
+</li></ol>
 
 <h3 class="year">2018</h3>
 <ol class="bibliography"><li>
